@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={% block css %}"{{ asset('style.css') }}"{% endblock css %}>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>{% block title %} Document {% endblock title %}</title>
+</head>
+<body>
+<header class="header">
+
+    <div class="flex divImg">
+        <img class="karrootImg" src="{{ asset('img/Karroot.png') }}"  alt="logo la karroot">
+    </div>
+    <nav class="divMenu">
+        <ul class="flex menuHome">
+            <li><a class="aMenu" href="{{ path('home') }}">Accueil</a></li>
+            <li><a class="aMenu" href="{{ path('cbd') }}">Produit CBD </a></li>
+            <li><a class="aMenu" href="{{ path('drinks') }}">Boissons énérgisantes</a></li>
+            <li><a class="aMenu" href="{{ path('login') }}">connexion</a></li>
+        </ul>
+    </nav>
+</header>
+{# Je place de blocks pour pouvoir importer mon squelette sur mes autres pages
+en ayant la possibilité de modifier uniquement l'interieur de ces blocs#}
+{% block main %}
+{% endblock main %}
+</body>
+<footer class="footer flex">
+    <a class="aMenu" href="#">Contact</a>
+    <a class="aMenu" href="{{ path('presentation') }}">Qui sommes nous ?</a>
+    <a class="aMenu" href="#">réseaux sociaux</a>
+</footer>
+</html>

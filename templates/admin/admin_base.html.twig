@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={% block css %}"{{ asset('style.css') }}"{% endblock css %}>
+    <title>
+        {% block title%}
+        {% endblock title%}
+    </title>
+</head>
+<body>
+<header class="header">
+
+    <div class="flex divImg">
+        <img class="karrootImg" src="{{ asset('img/Karroot.png') }}"  alt="logo la karroot">
+    </div>
+    <nav class="divMenu">
+        <ul class="flex menuHome">
+            <li><a class="aMenu" href="{{ path('admin_home') }}">Accueil</a></li>
+            <li><a class="aMenu" href="#">Produit CBD </a></li>
+            <li><a class="aMenu" href="#">Boissons énérgisantes</a></li>
+            <li><a class="aMenu" href="{{ path('app_logout') }}">déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
+<h1 class="adminTitle center"><em>Page Admin</em></h1>
+
+{% block main %}
+
+{% endblock main %}
+
+</body>
+</html>

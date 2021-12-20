@@ -1,0 +1,10 @@
+{% extends 'users/base.html.twig' %}
+{% block main %}
+    {% for drinks in drinks %}
+<div class="flex center">
+    <img class="imgDrinks" src="{{ asset('img/'~drinks.packageFileName) }}" alt="">
+    <h1>{{ drinks.marque }} Gout: {{ drinks.gout }}</h1>
+        <a href="{{ path('drink', {"id":drinks.id}) }}">Voir plus</a>
+</div>
+    {% endfor %}
+{% endblock main %}

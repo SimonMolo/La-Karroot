@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Consolas;
+}
+.menuHome{
+    padding: 40px;
+    justify-content: center;
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+}
+.aMenu {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0,2s;
+}
+.aMenu:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0,2s;
+}
+.aMenu span{
+    position: absolute;
+    display: block;
+}
+
+}
+.aMenu:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+.liHeader{
+    padding: 5px 50px;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: lightgray;
+}
+.divMenu{
+    background-color: black;
+}
+.divImg {
+    background-image: url("../public/img/imageWeed.jpg");
+    background-size: cover;
+    opacity: 50%;
+}
+
+.karrootImg{
+    width: 17rem;
+    padding: 3rem;
+    margin: 0 auto;
+    opacity: 100%;
+}
+.photoHome{
+    width: 200vw;
+}
+
+.imgPhotoHome {
+    width: 100%;
+    object-fit: cover;
+}
+
+.flex{
+    display: flex;
+}
+.footer{
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 10rem;
+}
+.footer a{
+    text-decoration: none;
+    border-right: lightgray 1px solid;
+    border-left: lightgray 1px solid;
+}
+.center{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.divcbd{
+    margin: 50px;
+}
+.divcbd p{
+    margin: 100px;
+}
+h1{
+    padding: 40px;
+}
+.imgPresentation{
+    width: 30rem;
+}
+.imgDrinks{
+    width: 15rem;
+}
+.adminTitle{
+    color: darkred;
+}

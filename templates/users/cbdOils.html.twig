@@ -1,0 +1,22 @@
+{% extends 'users/base.html.twig' %}
+{% block title%}
+    Huiles CBD
+{% endblock title %}
+    {% block main %}
+        <h2>Huiles CBD</h2>
+        <article>
+            {# je cree une boucle for pour passer sur chaque element de mon tableau livres et pour qu'il complete par les elements demandés #}
+            {% for cbds in cbds %}
+                <div>
+                    <img src="{{ asset('img/'~cbds.cbdFilename) }}" alt="">
+                    <h3> {{ cbds.marque }}</h3>
+                    <em>Pourcentage de CBD: {{ cbds.percent }}</em>
+                    <p> {{  cbds.forme }}</p>
+                    <br>
+                    <a href="{{ path('cbdUnit', {"id":cbds.id}) }}">Voir Plus</a>
+                </div>
+
+            {% endfor %}
+            {# je referme ma boucle for #}
+        </article>
+    {% endblock main %}

@@ -1,0 +1,9 @@
+{% extends "users/base.html.twig" %}
+{% block main %}
+    <div>
+        <h1>{{ cbd.marque }}</h1>
+        <img src="{{ asset('img/'~cbd.cbdFilename) }}" alt="">
+        <em>{{ cbd.percent }}</em>
+        <p>{{ cbd.forme }}</p>
+    </div>
+{% endblock main %}
